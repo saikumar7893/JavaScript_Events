@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Handling Evenets</title>
+</head>
+<body>
+	<p id="Kumar">Here We are using the onMouseOver Events</p>
+	<button id="myButton" onmouseover="change()" onmouseout="restore()">Click me!</button>
+	<br>
+	<br>
+
+<input type="text" name="text" id="input">
+
+   <button onclick="sai()" >Press me</button>
+
+
+   <ul id="my-list">
+  <li>Donkwy</li>
+  <li>Ravi</li>
+  <li>Kumar</li>
+  <li>Honey</li>
+</ul>
+
+<script type="text/javascript">
+	let over=document.getElementById("Kumar");
+	over.addEventListener('mouseover',()=>{over.style.color='red'});
+	over.addEventListener('mouseout',()=>{over.style.color='Black'});
+
+function change() {
+			document.getElementById("myButton").innerHTML = "Mouse is over the button!";
+		}
+
+		function restore() {
+			document.getElementById("myButton").innerHTML = "Click me!";
+		}
+
+		function sai()
+		{
+			document.getElementById("input").value=over.innerHTML;
+		}
+
+
+
+		function lucky()
+		{
+			document.getElementById('bavika').innerHTML=style.color="red";
+		}
+
+
+const items = document.querySelectorAll('#my-list li');
+
+for (let i = 0; i < items.length; i++) {
+  const x = items[i];
+  const y = x.getAttribute('style');
+  
+  x.onmouseover = function() {
+    x.style.color = 'red';
+    x.style.fontWeight = 'bold';
+  };
+  
+  x.onmouseout = function() {
+    x.setAttribute('style', y);
+  };
+}
+
+
+
+
+			
+</script>
+
+
+
+</body>
+</html>
